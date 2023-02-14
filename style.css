@@ -6,7 +6,11 @@ body {
 table, th, tr, td{
     border:1px solid black;
     padding: 5px;
-    width: 40%;
+    width: 10%;
+}
+
+th {
+    width: 300%;
 }
 
 li {
