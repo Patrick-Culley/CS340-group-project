@@ -2,8 +2,8 @@ body {
     font-family: 'Ubuntu', sans-serif;
 }
 
-table, th, td {
+table, th, tr, td{
     border:1px solid black;
     padding: 5px;
-    width: 30%;
+    width: 40%;
 }
