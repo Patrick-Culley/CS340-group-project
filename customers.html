@@ -5,13 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css" />
+    <script language="JavaScript">
+        function takeaction(option) {
+          if(option == 'add'){
+            document.getElementById('Table').style.display='none';
+            document.getElementById('addClient').style.display='block';
+          }
+        }
+        function add(){
+          takeaction('add');
+        }
+    </script>
     <title>Customers</title>
 </head>
 <body>
     <h1>Customers page</h1>
     <h2>Add, update, and delete customer info</h2>
     <br>
-    <table>
+    <table id="Table">
         <tr>
           <th>cust_id</th>
           <th>first_name</th>
@@ -53,6 +64,24 @@
                     <td><a href="#" style = "text-decoration:none;"><b>Delete</b></a></td>
                   <tr>
       </table>
-      <button type="button" style="margin-top: 10px; font-size: 18px;"><a href="#" style = "text-decoration:none;"><b>Add customer  </b></a></button>
+      <div id="addClient" style="display:none;">
+        <form method="POST">
+          <label for="first_name">First name</label>
+          <input type="text" id="first_name" style="margin-left: 5px;">
+          <br><br>  
+          <label for="last_name">Last name</label>
+          <input type="text" id="last_name" style="margin-left: 5px;">
+          <br><br>
+          <label for="email">Email</label>
+          <input type="text" id="email" style="margin-left: 37px;">
+          <br><br>  
+          <label for="address">Address</label>
+          <input type="text" id="address" style="margin-left: 19px;">
+          <br><br>  
+          <label for="balance">Balance</label>
+          <input type="text" id="address" style="margin-left: 19px;">
+        </form>
+      </div>
+      <button type="button" style="margin-top: 10px; font-size: 18px;"><a href="#" style = "text-decoration:none;" onclick="add()"><b>Add customer</b></a></button>
 </body>
 </html>
