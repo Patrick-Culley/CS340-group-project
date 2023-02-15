@@ -1,24 +1,29 @@
-<html>
-<head><link href="style.css" rel="stylesheet" type="text/css" />
-    <script language="JavaScript">
-        function showform(option){
-        if(option == 'insert'){
-
-            document.getElementById('insert').style.display='block';
-            document.getElementById('vendor').style.display = 'none';
-          }
-        if(option == 'update'){
-
-            document.getElementById('update').style.display='block';
-            document.getElementById('vendor').style.display = 'none';
-        }}
-        function newvendor(vid) {showform ('insert')}
-        function updatevendor(vid) {showform ('update');}
-        function vendorlist() {showform ('vendor');}
-    </script>
-<title>Vendors</title>
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet" type="text/css" />
+        <script language="JavaScript">
+            function showform(option){
+            if(option == 'insert'){
+    
+                document.getElementById('insert').style.display='block';
+                document.getElementById('vendor').style.display = 'none';
+              }
+            if(option == 'update'){
+    
+                document.getElementById('update').style.display='block';
+                document.getElementById('vendor').style.display = 'none';
+            }}
+            function newvendor(vid) {showform ('insert')}
+            function updatevendor(vid) {showform ('update');}
+            function vendorlist() {showform ('vendor');}
+        </script>
+    <title>Vendors</title>       
 </head>
+<body>
 <body onload="vendorlist()">
 <h1>Vendors</h1>
 
