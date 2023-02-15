@@ -1,35 +1,36 @@
-<html>
-<head><link href="style.css" rel="stylesheet" type="text/css" />
-    <script language="JavaScript">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <title>Blotters</title>
+  <script language="JavaScript">
     function showform(option){
-      
       if(option == 'create'){
-
         document.getElementById('create').style.display='block';
         document.getElementById('blotter').style.display = 'none';
         document.getElementById('delete').style.display = 'none';
-    }
+      }
       else if(option == 'delete'){
-
         document.getElementById('delete').style.display='block';
         document.getElementById('blotter').style.display = 'none';
         document.getElementById('create').style.display = 'none';
       }
       else if(option =='blotter') {
-				document.getElementById('blotter').style.display = 'block';
-				document.getElementById('create').style.display = 'none';
-	}
-  
-}
+        document.getElementById('blotter').style.display = 'block';
+        document.getElementById('create').style.display = 'none';
+      } 
+    }
     function newblotter(bid) {showform ('create')}
     function deleteblotter(bid) {showform ('delete');}
     function blotterlist() {showform ('blotter');}
-    </script>
+  </script>
 </head>
-
 <body>
 <h1>Blotters</h1>
-[ <a href="customers.html">Customers</a> | <a href="employees.html">Employees</a> | <a href="stocks.html">Stocks</a> | <a href="stock-orders.html">Stock Order</a> | <a href="vendors.html">Vendors</a>]
+<a href="customers.html">Customers</a> | <a href="employees.html">Employees</a> | <a href="stocks.html">Stocks</a> | <a href="stock-orders.html">Stock Order</a> | <a href="vendors.html">Vendors</a>
 <div id="blotter">
 <p><strong>Trade Blotter</strong></p>
 <th><a href="#" onClick="newblotter()">New Blotter Report</a></th>
@@ -44,7 +45,6 @@
     <th>Action</th>
   </tr>
   <tr>
-    
     <td>992020122</td>
     <td align="right" >99</td>
     <td align="right">2022-02-01</td>
@@ -99,3 +99,5 @@
             <input class="btn" type="button" value="cancel" onClick="blotterlist()">
   </form> 
 </div><!-- delete blotter -->
+</body>
+</html>

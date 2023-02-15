@@ -16,61 +16,60 @@
     </script>
 </head>
 <body>
-[ <a href="customers.html">Customers</a> | <a href="employees.html">Employees</a> | <a href="vendors.html">Vendors</a> | <a href="stock-orders.html">Stock Order</a> | <a href="blotters.html">Blotters</a>]
-
-<p><strong>Stocks List</strong></p>
-<p>&nbsp;</p>
-
+<h1><strong>Stocks List</strong></h1>
+<a href="customers.html">Customers</a> | <a href="employees.html">Employees</a> | <a href="vendors.html">Vendors</a> | <a href="stock-orders.html">Stock Order</a> | <a href="blotters.html">Blotters</a>
+<br><br>
 <div id="search">
   <form method="POST">
-<fieldset class="fields">
-<label>Stock Ticker</label> <input type="text" id="searchID" name="Search Ticker"></input>
-<input class="btn" type="submit" value="Search" onClick="searchticker(searchID)">
-</fieldset>
-
-<p>&nbsp;</p>
+    <fieldset class="fields">
+    <label>Stock Ticker</label>
+    <input type="text" id="searchID" name="Search Ticker"></input>
+    <input class="btn" type="submit" value="Search" onClick="searchticker(searchID)">
+    </fieldset>
+  </form>
+</div>
+<br>
 <div id="stocks"> 
-<table border="1" cellpadding="5">
+<table style="width: 25%">
   <tr > 
-    <th>Stock Ticker</th>
-    <th>Company Name</th>
-    <th>Exchange Name</th>
+    <th>Stock&nbspTicker</th>
+    <th>Company&nbspName</th>
+    <th>Exchange&nbspName</th>
     <th>Price</th>
-    <th>As of date</th>
+    <th>As&nbspof&nbspdate</th>
   </tr>
   <tr id="JNJ" style="display:none">
     <td>JNJ</td>
-    <td >Johnson &
-      Johnson</td>
-    <td align="center" >NYSE</td>
-    <td>$ 165.25</td>
+    <td>Johnson & Johnson</td>
+    <td>NYSE</td>
+    <td>$165.25</td>
     <td>2022-02-01</td>
   </tr>
   <tr id="MSFT">
     <td>MSFT</td>
     <td>Microsoft</td>
-    <td align="center" >NYSE</td>
-    <td >$ 234.25</td>
+    <td>NYSE</td>
+    <td >$234.25</td>
     <td>2022-02-01</td>
   </tr>
   <tr>
     <td>PLTR</td>
     <td>Palantir</td>
-    <td align="center" >NYSE</td>
-    <td>$ 8.25</td>
+    <td>NYSE</td>
+    <td>$8.25</td>
     <td>2022-02-07</td>
   </tr>  <tr>
     <td>PEP</td>
     <td>PepsiCo</td>
-    <td align="center" >NYSE</td>
-    <td >$ 71.20</td>
+    <td>NYSE</td>
+    <td >$71.20</td>
     <td>2022-02-01</td>
   </tr>
   <tr>
     <td>PLTR</td>
     <td>Palantir</td>
-    <td align="center" >NYSE</td>
-    <td>$ 8.25</td>
+    <td>NYSE</td>
+    <td>$8.25</td>
     <td>2022-02-07</td>
   </tr>
 </table>
