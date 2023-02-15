@@ -1,12 +1,95 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vendors</title>
+<html>
+<head><link href="style.css" rel="stylesheet" type="text/css" />
+    <script language="JavaScript">
+        function showform(option){
+        if(option == 'insert'){
+
+            document.getElementById('insert').style.display='block';
+            document.getElementById('vendor').style.display = 'none';
+          }
+        if(option == 'update'){
+
+            document.getElementById('update').style.display='block';
+            document.getElementById('vendor').style.display = 'none';
+        }}
+        function newvendor(vid) {showform ('insert')}
+        function updatevendor(vid) {showform ('update');}
+        function vendorlist() {showform ('vendor');}
+    </script>
+<title>Vendors</title>
+
 </head>
-<body>
-    <h1>Vendors Page</h1>
-</body>
-</html>
+
+<body onload="vendorlist()">
+<h1>Vendors</h1>
+
+
+[ <a href="customers.html">Customers</a> | <a href="employees.html">Employees</a> | <a href="stocks.html">Stocks</a> | <a href="stock-orders.html">Stock Order</a> | <a href="blotters.html">Blotters</a>]
+<div id="vendor">
+<p><strong>Vendor Partner List</strong></p>
+<table border="1" cellpadding="5">
+  <tr>
+    
+    <th>Vendor ID</th>
+    <th>Vendor Name</th>
+    <th>Website</th>
+    <th>Phone Number</th>
+  </tr>
+  
+  <tr>
+    
+    <td><a href="#" onClick="updatevendor()">Update</a></td>
+    <td align="right" >Charles Schwab</td>
+    <td >www.schwab.com</td>
+    <td align="right" >800-223-8787</td>
+
+  </tr>
+  <tr>
+    <td><a href="#" onClick="updatevendor()">Update</a></td>
+    <td align="right" >Fidelity</td>
+    <td>ww.fidelity.com</td>
+    <td align="right" >800-442-2757</td>
+
+  </tr>
+  <tr>
+    <td><a href="#" onClick="updatevendor()">Update</a></td>
+    <td align="right">E-Trade</td>
+    <td>www.us.etrade.com</td>
+    <td align="right" >877-586-8898</td>
+
+  </tr>
+  <th><a href="#" onClick="newvendor()">New Vendor</a></th>
+</table>
+<p>&nbsp;</p>
+</div> <!-- vendor partner list -->
+
+<div id="insert" style="display:none;">
+    <form method="POST" >
+        <legend><strong>Add Vendor</strong></legend>
+          <fieldset class="fields">
+            <label> Vendor ID </label> <input type="text" name="vendorID">
+            <label> Vendor Name </label> <input type="text" name="vendorName">
+            <label> Website </label> <input type="text" name="website">
+            <label> Phone Number </label> <input type="text" name="phoneNumber">
+          </fieldset>
+          <input class="btn" type="submit" id="Vendor" value="Add Vendor">
+          <input class="btn" type="submit" value="cancel" onClick="vendorlist()">
+	</form> <!--add vendor-->
+
+</div><!-- insert -->
+
+<p>&nbsp;</p>
+<div id="update" style="display:none;">
+  <form method="POST" id="updatevendor">
+      <legend><strong>Update Vendor</strong></legend>
+          <fieldset class="fields">
+          
+            <label> Vendor ID </label> <input type="text" name="vendorID">
+          <label> Vendor Name </label> <input type="text" name="vendorName">
+          <label> Website </label> <input type="text" name="website">
+          <label> Phone Number </label> <input type="text" name="phoneNumber">
+    </fieldset>
+    <input class="btn" type="submit" id="updateVendor" value="Update Vendor">
+          <input class="btn" type="submit" value="cancel" onClick="vendorlist()">
+  </form> 
+</div><!-- update vendor -->
