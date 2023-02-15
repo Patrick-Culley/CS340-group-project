@@ -10,6 +10,8 @@
           if(option == 'add'){
             document.getElementById('Table').style.display='none';
             document.getElementById('addEmployee').style.display='block';
+            document.getElementById('submitbutton').style.display='block';
+            document.getElementById('addbutton').style.display='none';
           }
           if(option == 'update'){
             document.getElementById('Table').style.display='none';
@@ -17,35 +19,31 @@
             document.getElementById('addbutton').style.display='none';
             document.getElementById('updatebutton').style.display='block';
           }
+          if(option == 'submit'){
+            location.reload();
+          }
         }
         function add(){
           takeaction('add');
         }
         function update(){
-            takeaction('update')
+            takeaction('update');
+        }
+        function submit(){
+            takeaction('submit');
         }
     </script>
     <title>Employees</title>
 </head>
 <body>
-    <h1>Employees page</h1>
-    <ul style="padding-left: 0;">
-      <li>
-          <a style = "text-decoration:none;" href="customers.html">Customers&nbsp|</a> 
-      </li>
-      <li>
-          <a style = "text-decoration:none;" href="employees.html">Employees&nbsp|</a>  
-      </li>
-      <li style="margin-right: -30px;">
-          <a style = "text-decoration:none;" href="stock-orders.html">Orders&nbsp| </a> 
-      </li>
-      <li style="margin-right: -25px;">
-          <a style = "text-decoration:none;" href="blotters.html">Blotters&nbsp|</a> 
-      </li>
-      <li>
-          <a style = "text-decoration:none;" href="vendors.html">Vendors&nbsp|</a>  
-      </li>
-    </ul>
+    <h1>Employees</h1>
+    <a href="customers.html">Customers</a> | 
+    <a href="employees.html">Employees</a> | 
+    <a href="stocks.html">Stocks</a> | 
+    <a href="stock-orders.html">Stock Order</a> | 
+    <a href="vendors.html">Vendors</a> |
+    <a href="blotters.html">Blotters</a>
+
     <br>
     <h2>Add, update, and delete employee info</h2>
     <table id="Table">
@@ -115,7 +113,7 @@
         </form>
       </div>
       <button type="button" id="addbutton" style="margin-top: 10px; font-size: 18px;"><a href="#" style = "text-decoration:none;" onclick="add()"><b>Add employee</b></a></button>
-      <button type="button" id="updatebutton" style="margin-top: 10px; font-size: 18px; display:none;"><a href="#" style = "text-decoration:none;" onclick="update()"><b>Update</b></a></button>
-
+      <button type="button" id="updatebutton" style="margin-top: 10px; font-size: 18px; display:none;"><a href="#" style = "text-decoration:none;" onclick=location.reload()><b>Update</b></a></button>
+      <button type="button" id="submitbutton" style="margin-top: 10px; font-size: 18px; display: none;"><a href="#" style = "text-decoration:none;" onclick="submit()"><b>Submit</b></a></button>
 </body>
 </html>

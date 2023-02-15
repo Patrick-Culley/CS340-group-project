@@ -10,12 +10,17 @@
           if(option == 'add'){
             document.getElementById('Table').style.display='none';
             document.getElementById('addClient').style.display='block';
+            document.getElementById('submitbutton').style.display='block';
+            document.getElementById('addbutton').style.display='none';
           }
           if(option == 'update'){
             document.getElementById('Table').style.display='none';
             document.getElementById('updateClient').style.display='block';
             document.getElementById('addbutton').style.display='none';
             document.getElementById('updatebutton').style.display='block';
+          }
+          if (option == 'submit'){
+            location.reload();
           }
         }
         function alert(){
@@ -27,13 +32,20 @@
         function update(){
           takeaction('update');
         }
+        function submit(){
+          takeaction('submit');
+        }
     </script>
     <title>Customers</title>
 </head>
 <body>
-    <h1>Customers page</h1>
-    <a href="customers.html">Customers</a> | <a href="employees.html">Employees</a> | <a href="stocks.html">Stocks</a> | <a href="stock-orders.html">Stock Order</a> | <a href="vendors.html">Vendors</a>
-
+    <h1>Customers</h1>
+    <a href="customers.html">Customers</a> | 
+    <a href="employees.html">Employees</a> | 
+    <a href="stocks.html">Stocks</a> | 
+    <a href="stock-orders.html">Stock Order</a> | 
+    <a href="vendors.html">Vendors</a> |
+    <a href="blotters.html">Blotters</a>
   <h2>Add, update, and delete customer info</h2>
     <table id="Table">
         <tr>
@@ -114,6 +126,8 @@
         </form>
       </div>
       <button type="button" id="addbutton" style="margin-top: 10px; font-size: 18px;"><a href="#" style = "text-decoration:none;" onclick="add()"><b>Add customer</b></a></button>
-      <button type="button" id="updatebutton" style="margin-top: 10px; font-size: 18px; display:none;"><a href="#" style = "text-decoration:none;"><b>Update</b></a></button>
-</body>
+      <button type="button" id="updatebutton" style="margin-top: 10px; font-size: 18px; display:none;"><a href="#" style = "text-decoration:none;" onclick=location.reload()><b>Update</b></a></button>
+      <button type="button" id="submitbutton" style="margin-top: 10px; font-size: 18px; display: none;"><a href="#" style = "text-decoration:none;" onclick="submit()"><b>Submit</b></a></button>
+
+    </body>
 </html>

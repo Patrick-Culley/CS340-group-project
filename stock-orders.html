@@ -5,13 +5,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css" />
+    <script language="JavaScript">
+        function takeaction(option){
+            if (option == 'add'){
+                document.getElementById('addOrder').style.display='block';
+                document.getElementById('addbutton').style.display='none';
+                document.getElementById('submitbutton').style.display='block';
+            }
+            if (option == 'submit'){
+                document.getElementById('addOrder').style.display='none';
+                document.getElementById('addbutton').style.display='block';
+                document.getElementById('submitbutton').style.display='none';
+            }
+        }
+        function add(){
+            takeaction('add');
+        }
+        function submit(){
+            takeaction('submit');
+        }
+    </script>
     <title>Stock Orders</title>
 </head>
 <body>
-    <h1>Stock Orders Page</h1>
-    <a href="customers.html">Customers</a> | <a href="employees.html">Employees</a> | <a href="stocks.html">Stocks</a> | <a href="stock-orders.html">Stock Order</a> | <a href="vendors.html">Vendors</a>
-
-    <h2>View all stock orders</h2>
+    <h1>Stock Orders</h1>
+        <a href="customers.html">Customers</a> | 
+        <a href="employees.html">Employees</a> | 
+        <a href="stocks.html">Stocks</a> | 
+        <a href="stock-orders.html">Stock Order</a> | 
+        <a href="vendors.html">Vendors</a> |
+        <a href="blotters.html">Blotters</a>
+    <h2>View or add stock orders</h2>
     <table id="Table">
         <tr>
           <th>order_num</th>
@@ -58,5 +82,40 @@
             <td>2023-02-08</td>
         <tr>
       </table>
-</body>
+      <br>
+      <div id="addOrder" style="display:none;">
+        <form method="POST">
+          <label for="cust_id">Customer ID:</label>
+          <br>
+          <input type="text" id="first_name"">
+          <br><br>  
+          <label for="vendor_id">Vendor ID:</label>
+          <br>
+          <input type="text" id="last_name">
+          <br><br>
+          <label for="stock_ticker">Ticker:</label>
+          <br>
+          <input type="text" id="email">
+          <br><br>  
+          <label for="address">Quantity:</label>
+          <br>
+          <input type="text" id="address">
+          <br><br>
+          <label for="address">Unit Price:</label>
+          <br>
+          <input type="text" id="address">
+          <br><br>
+          <label for="address">Total:</label>
+          <br>
+          <input type="text" id="address">
+          <br><br>
+          <label for="address">Transaction type:</label>
+          <br>
+          <input type="text" id="address">
+          <br><br>
+        </form>
+      </div>
+      <button type="button" id="addbutton" style="margin-top: 10px; font-size: 18px;"><a href="#" style = "text-decoration:none;" onclick="add()"><b>Add order</b></a></button>
+      <button type="button" id="submitbutton" style="margin-top: 10px; font-size: 18px; display: none;" onclick="submit()"><a href="#" style = "text-decoration:none;" onclick="submit()"><b>Submit</b></a></button>
+    </body>
 </html>
