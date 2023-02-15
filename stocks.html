@@ -1,12 +1,78 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stocks</title>
+<title>Stocks</title>
+<link href="style.css" rel="stylesheet" type="text/css" />
+<script language="JavaScript">
+function searchticker(company){}
+  if(company = "search"){
+    document.getElementById('JNJ').style.display='block';
+    document.getElementById('MSFT').style.display = 'none';
+
+  }
+
+</script>
+
 </head>
-<body>
-    <h1>Stocks Page</h1>
-</body>
-</html>
+
+[ <a href="customers.html">Customers</a> | <a href="employees.html">Employees</a> | <a href="vendors.html">Vendors</a> | <a href="stock-orders.html">Stock Order</a> | <a href="blotters.html">Blotters</a>]
+
+<p><strong>Stocks List</strong></p>
+<p>&nbsp;</p>
+
+
+<div id="search">
+  <form method="POST">
+<fieldset class="fields">
+<label>Stock Ticker</label> <input type="text" id="searchID" name="Search Ticker"></input>
+<input class="btn" type="submit" value="Search" onClick="searchticker(searchID)">
+</fieldset>
+
+
+
+
+<p>&nbsp;</p>
+<div id="stocks"> 
+<table border="1" cellpadding="5">
+  <tr > 
+    <th>Stock Ticker</th>
+    <th>Company Name</th>
+    <th>Exchange Name</th>
+    <th>Price</th>
+    <th>As of date</th>
+  </tr>
+  <tr id="JNJ" style="display:none">
+    <td>JNJ</td>
+    <td >Johnson &
+      Johnson</td>
+    <td align="center" >NYSE</td>
+    <td>$ 165.25</td>
+    <td>2022-02-01</td>
+  </tr>
+  <tr id="MSFT">
+    <td>MSFT</td>
+    <td>Microsoft</td>
+    <td align="center" >NYSE</td>
+    <td >$ 234.25</td>
+    <td>2022-02-01</td>
+  </tr>
+  <tr>
+    <td>PLTR</td>
+    <td>Palantir</td>
+    <td align="center" >NYSE</td>
+    <td>$ 8.25</td>
+    <td>2022-02-07</td>
+  </tr>  <tr>
+    <td>PEP</td>
+    <td>PepsiCo</td>
+    <td align="center" >NYSE</td>
+    <td >$ 71.20</td>
+    <td>2022-02-01</td>
+  </tr>
+  <tr>
+    <td>PLTR</td>
+    <td>Palantir</td>
+    <td align="center" >NYSE</td>
+    <td>$ 8.25</td>
+    <td>2022-02-07</td>
+  </tr>
+</table>
