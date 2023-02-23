@@ -1,73 +1,81 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="style.css" rel="stylesheet" type="text/css" />
-  <title>Blotters</title>
-  <script language="JavaScript">
+<html>
+<head><link href="style.css" rel="stylesheet" type="text/css" />
+    <script language="JavaScript">
     function showform(option){
+      
       if(option == 'create'){
+
         document.getElementById('create').style.display='block';
         document.getElementById('blotter').style.display = 'none';
         document.getElementById('delete').style.display = 'none';
-      }
+    }
       else if(option == 'delete'){
+
         document.getElementById('delete').style.display='block';
         document.getElementById('blotter').style.display = 'none';
         document.getElementById('create').style.display = 'none';
       }
       else if(option =='blotter') {
-        document.getElementById('blotter').style.display = 'block';
-        document.getElementById('create').style.display = 'none';
-      } 
-    }
+				document.getElementById('blotter').style.display = 'block';
+				document.getElementById('create').style.display = 'none';
+	}
+  
+}
     function newblotter(bid) {showform ('create')}
     function deleteblotter(bid) {showform ('delete');}
     function blotterlist() {showform ('blotter');}
-  </script>
+    </script>
 </head>
+
 <body>
 <h1>Blotters</h1>
-  <a href="index.html">Home</a> |
-  <a href="customers.html">Customers</a> | 
-  <a href="employees.html">Employees</a> | 
-  <a href="stocks.html">Stocks</a> | 
-  <a href="stock-orders.html">Stock Order</a> | 
-  <a href="vendors.html">Vendors</a> |
-  <a href="blotters.html">Blotters</a> |
-  <a href="employees_blotters.html">Employee Blotters</a>
+<a href="index.html">Home</a> |
+<a href="customers.html">Customers</a> | 
+<a href="employees.html">Employees</a> | 
+<a href="stocks.html">Stocks</a> | 
+<a href="stock-orders.html">Stock Order</a> | 
+<a href="vendors.html">Vendors</a> |
+<a href="blotters.html">Blotters</a> |
+<a href="employees_blotters.html">Employee Blotters</a>
 <div id="blotter">
-<p style="font-size: 20px"><strong>Trade Blotter: View, add, or delete reports</strong></p>
+<p style="font-size: 20px"><strong>Trade Blotter: View, Add, or Delete Reports</strong></p>
 <th><a href="#" onClick="newblotter()">New Blotter Report</a></th>
 <table border="1" cellpadding="5">
   <tr>
-    <th>Report&nbspID</th>
-    <th>Order&nbspNumber</th>
-    <th>Settlement&nbspDate</th>
-    <th>Trade&nbspType</th>
+    <th style="text-align: center;">Order Number </th>
+    <th>Settlement Date</th>
+    <th>Trade Type</th>
     <th>Fees</th>
-    <th>Net&nbspProceed</th>
-    <th>Action</th>
+    <th>Net Proceed</th>
+    <th></th>
   </tr>
   <tr>
-    <td style="text-align: center;">1</td>
-    <td style="text-align: center;">1</td>
-    <td style="text-align: center;">2022-02-08</td>
-    <td style="text-align: center;">buy</td>
-    <td style="text-align: center;">0.75</td>
-    <td style="text-align: center;">92.25</td>
+    
+    <td>1</td>
+    <td>2023-02-08</td>
+    <td>buy</td>
+    <td>3.00</td>
+    <td>168.00</td>
+
     <td><a href="#" onClick="deleteblotter()">Delete</a></td>
   </tr>
-    <td style="text-align: center;">2</td>
-    <td style="text-align: center;">2</td>
-    <td style="text-align: center;">2022-02-08</td>
-    <td style="text-align: center;">buy</td>
-    <td style="text-align: center;">0.75</td>
-    <td style="text-align: center;">750.00</td>
+  <tr>
+    <td>2</td>
+    <td >	2023-02-08</td>
+    <td>buy</td>
+    <td>5.5</td>
+    <td>1107.55</td>
+
     <td><a href="#" onClick="deleteblotter()">Delete</td>
   </tr>
+  <tr>
+    <td>3</td>
+    <td>2023-02-08</td>
+    <td>buy</td>
+    <td>3.5</td>
+    <td>237.5</td>
+
+    <td><a href="#" onClick="deleteblotter()">Delete</td>
 </table>
 <p>&nbsp;</p>
 </div> <!-- blotter report -->
@@ -77,16 +85,16 @@
         <legend><strong>Create Blotter</strong></legend>
           <fieldset class="fields">
             
-            <label> Report ID </label> <input type="text" name="reportID">
-            <label> Type of Report </label> <select name="reportype">
-              <option value="0">&nbsp;</option>
-              <option value="1"> Daily </option>
-              <option value="1"> Weekly </option>
-              <option value="1"> Monthly </option>
-            </select>
-            <label> Order Number </label> <input type="text" name="orderNum">
-            <label> Customer ID </label> <input type="text" name="customerID">
-            <label> Settlement Date </label> <input type="text" name="settlement">
+            <label for="order_num">Order Number: </label> 
+            <select name="ordernum" style="margin-right: 20px;">
+            <option value ="order_num"> 1</option>
+            <option value ="order_num"> 2</option>
+            <option value ="order_num"> 3</option>
+          </select>
+            <label> Settlement Date  </label> <input type="text" name="settlement">
+            <label> Trade Type </label> <input type="text" name="tradetype">
+            <label> Fees </label> <input type="text" name="fees">
+            <label> Net Proceeds </label> <input type="text" name="netproceeds">
             
           </fieldset>
           <input class="btn" type="submit" id="createblotter" value="Create blotter">
@@ -106,5 +114,3 @@
             <input class="btn" type="button" value="cancel" onClick="blotterlist()">
   </form> 
 </div><!-- delete blotter -->
-</body>
-</html>
