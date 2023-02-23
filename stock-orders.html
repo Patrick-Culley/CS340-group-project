@@ -29,12 +29,14 @@
 </head>
 <body>
     <h1>Stock Orders</h1>
+        <a href="index.html">Home</a> |
         <a href="customers.html">Customers</a> | 
         <a href="employees.html">Employees</a> | 
         <a href="stocks.html">Stocks</a> | 
         <a href="stock-orders.html">Stock Order</a> | 
         <a href="vendors.html">Vendors</a> |
-        <a href="blotters.html">Blotters</a>
+        <a href="blotters.html">Blotters</a> |
+        <a href="employees_blotters.html">Employee Blotters</a>
     <h2>View or add stock orders</h2>
     <table id="Table">
         <tr>
@@ -58,7 +60,7 @@
             <td>165</td>
             <td>buy</td>
             <td>2023-02-08</td>
-        <tr>
+        </tr>
         <tr>
             <td>2</td>
             <td>2</td>
@@ -69,7 +71,7 @@
             <td>1102.05</td>
             <td>buy</td>
             <td>2023-02-08</td>
-        <tr>
+        </tr>
         <tr>
             <td>3</td>
             <td>3</td>
@@ -80,39 +82,45 @@
             <td>234</td>
             <td>buy</td>
             <td>2023-02-08</td>
-        <tr>
+        </tr>
       </table>
       <br>
       <div id="addOrder" style="display:none;">
         <form method="POST">
-          <label for="cust_id">Customer ID:</label>
-          <br>
-          <input type="text" id="first_name"">
-          <br><br>  
-          <label for="vendor_id">Vendor ID:</label>
-          <br>
-          <input type="text" id="last_name">
-          <br><br>
-          <label for="stock_ticker">Ticker:</label>
-          <br>
-          <input type="text" id="email">
-          <br><br>  
-          <label for="address">Quantity:</label>
-          <br>
-          <input type="text" id="address">
-          <br><br>
-          <label for="address">Unit Price:</label>
-          <br>
-          <input type="text" id="address">
-          <br><br>
-          <label for="address">Total:</label>
-          <br>
-          <input type="text" id="address">
-          <br><br>
-          <label for="address">Transaction type:</label>
-          <br>
-          <input type="text" id="address">
-          <br><br>
+            <label for="cust_id" style="padding-right:5px ">Customer ID:</label>
+            <select name="customerID" id="cust_id">
+                <option value="cust_id">1</option>
+                <option value="cust_id">2</option>
+                <option value="cust_id">3</option>
+            </select>
+            <br><br>  
+            <label for="vendor_id" style="padding-right:23px">Vendor ID:</label>
+            <select name="VendorID" id="vendor_id">
+                <option value="vendor_id">1</option>
+                <option value="vendor_id">2</option>
+                <option value="vendor_id">3</option>
+            </select>
+            <br></br>
+            <label for="stock_ticker">Ticker:</label>
+            <br>
+            <input type="text" id="email">
+            <br><br>  
+            <label for="address">Quantity:</label>
+            <br>
+            <input type="text" id="address">
+            <br><br>
+            <label for="address">Unit Price:</label>
+            <br>
+            <input type="text" id="address">
+            <br><br>
+            <label for="address">Total:</label>
+            <br>
+            <input type="text" id="address">
+            <br><br>
+            <label for="address">Transaction type:</label>
+            <br>
+            <input type="text" id="address">
+            <br><br>
         </form>
       </div>
       <button type="button" id="addbutton" style="margin-top: 10px; font-size: 18px;"><a href="#" style = "text-decoration:none;" onclick="add()"><b>Add order</b></a></button>

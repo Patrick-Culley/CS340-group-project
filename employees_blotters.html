@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <title>Employee Blotters</title>
+</head>
+<body>
+    <h1>Employee Blotter Reports</h1>
+    <a href="index.html">Home</a> | 
+    <a href="customers.html">Customers</a> | 
+    <a href="employees.html">Employees</a> | 
+    <a href="stocks.html">Stocks</a> | 
+    <a href="stock-orders.html">Stock Order</a> | 
+    <a href="vendors.html">Vendors</a> |
+    <a href="blotters.html">Blotters</a> |
+    <a href="employees_blotters.html">Employee Blotters</a>
+
+    <br><br>
+    <table>
+        <tr>
+            <th>Employee&nbspReport&nbspID</th>
+            <th>Employee&nbspID</th>
+            <th>Report&nbspID</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>1</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>2</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>3</td>
+            <td>3</td>
+        </tr>
+    </table>
+    <br>
+    <h3>Add Employee Report from the options below</h3>
+    <form method="POST">
+        <fieldset style="width: 30%;">
+        <label for="employeeID">Employee ID: </label>
+        <select name="employee_id" style="margin-right: 20px;">
+            <option value="employeeID">1</option>
+            <option value="employeeID">2</option>
+            <option value="employeeID">3</option>
+        </select>
+        <label for="employeeID">Report ID: </label>
+        <select name="report_id" style="margin-right: 20px;">
+            <option value="reportID">1</option>
+            <option value="reportID">2</option>
+            <option value="reportID">3</option>
+        </select>
+        <br><br>
+        <input class="btn" type="submit" id="addEHB" value="Add" style="width: 25%; font-size: 18px; ">
+    </fieldset>
+    </form>
+</body>
+</html>

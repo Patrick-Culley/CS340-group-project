@@ -11,24 +11,29 @@
         if(company = "search"){
         document.getElementById('JNJ').style.display='block';
         document.getElementById('MSFT').style.display = 'none';
-    
         }
     </script>
 </head>
 <body>
 <h1><strong>Stocks List</strong></h1>
-    <a href="customers.html">Customers</a> | 
-    <a href="employees.html">Employees</a> | 
-    <a href="stocks.html">Stocks</a> | 
-    <a href="stock-orders.html">Stock Order</a> | 
-    <a href="vendors.html">Vendors</a> |
-    <a href="blotters.html">Blotters</a><br>
+  <a href="index.html">Home</a> |
+  <a href="customers.html">Customers</a> | 
+  <a href="employees.html">Employees</a> | 
+  <a href="stocks.html">Stocks</a> | 
+  <a href="stock-orders.html">Stock Order</a> | 
+  <a href="vendors.html">Vendors</a> |
+  <a href="blotters.html">Blotters</a> |
+  <a href="employees_blotters.html">Employee Blotters</a>
 <h2>Search for stocks</h2>
 <div id="search">
   <form method="POST">
     <fieldset class="fields">
-    <label>Stock Ticker</label>
-    <input type="text" id="searchID" name="Search Ticker"></input>
+    <label for="search">Stock Ticker</label>
+    <select name="search" id="search">
+      <option value="stock_search">PLTR</option>
+      <option value="stock_search">MSFT</option>
+      <option value="stock_search">PEP</option>
+    </select>
     <input class="btn" type="submit" value="Search" onClick="searchticker(searchID)">
     </fieldset>
   </form>
@@ -67,7 +72,7 @@
     <td>PEP</td>
     <td>PepsiCo</td>
     <td>NYSE</td>
-    <td >$71.20</td>
+    <td>$71.20</td>
     <td>2022-02-01</td>
   </tr>
   <tr>
@@ -78,7 +83,19 @@
     <td>2022-02-07</td>
   </tr>
 </table>
-</div>
+<h3><strong>Add Stock</strong></h3>
+<form method="POST">
+    <label for="add_stock">Ticker </label><br>
+    <input type="text" id="ticker"><br><br>
+    <label for="company">Company Name </label><br>
+    <input type="text" id="company"><br><br>
+    <label for="exchange">Exchange Name </label><br>
+    <input type="text" id="exchange"><br><br>
+    <label for="price">Price </label><br>
+    <input type="text" id="price"><br><br>
+    <label for="date">As Of Date </label><br>
+    <input type="text" id="date"><br><br>
+    <input type="button" value="Add stock" style="font-weight: bold; width: 100px; height: 30px;">
 </form>
 </div>
 </body>

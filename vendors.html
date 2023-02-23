@@ -26,16 +26,19 @@
 <body>
 <body onload="vendorlist()">
 <h1>Vendors</h1>
-    <a href="customers.html">Customers</a> | 
-    <a href="employees.html">Employees</a> | 
-    <a href="stocks.html">Stocks</a> | 
-    <a href="stock-orders.html">Stock Order</a> | 
-    <a href="vendors.html">Vendors</a> |
-    <a href="blotters.html">Blotters</a>
+  <a href="index.html">Home</a> |
+  <a href="customers.html">Customers</a> | 
+  <a href="employees.html">Employees</a> | 
+  <a href="stocks.html">Stocks</a> | 
+  <a href="stock-orders.html">Stock Order</a> | 
+  <a href="vendors.html">Vendors</a> |
+  <a href="blotters.html">Blotters</a> |
+  <a href="employees_blotters.html">Employee Blotters</a>
 <div id="vendor">
 <p style="font-size: 20px;"><strong>Vendor Partner List: View, add, or update Vendor</strong></p>
 <table style="width: 25%">
   <tr>
+    <th></th>
     <th>Vendor&nbspID</th>
     <th>Vendor&nbspName</th>
     <th>Website</th>
@@ -43,18 +46,21 @@
   </tr>
   <tr>
     <td><a href="#" onClick="updatevendor()">Update</a></td>
+    <td>1</td>
     <td align="right" >Charles&nbspSchwab</td>
     <td >www.schwab.com</td>
     <td align="right" >800-223-8787</td>
   </tr>
   <tr>
     <td><a href="#" onClick="updatevendor()">Update</a></td>
+    <td>2</td>
     <td align="right" >Fidelity</td>
     <td>ww.fidelity.com</td>
     <td align="right" >800-442-2757</td>
   </tr>
   <tr>
     <td><a href="#" onClick="updatevendor()">Update</a></td>
+    <td>3</td>
     <td align="right">E-Trade</td>
     <td>www.us.etrade.com</td>
     <td align="right" >877-586-8898</td>
@@ -84,7 +90,12 @@
   <form method="POST" id="updatevendor">
       <legend><strong>Update Vendor</strong></legend>
           <fieldset class="fields">
-            <label> Vendor ID </label> <input type="text" name="vendorID">
+            <label> Vendor ID </label> 
+              <select name="VendorID" id="vendor_id">
+                  <option value="vendor_id">1</option>
+                  <option value="vendor_id">2</option>
+                  <option value="vendor_id">3</option>
+              </select>
             <label> Vendor Name </label> <input type="text" name="vendorName">
             <label> Website </label> <input type="text" name="website">
             <label> Phone Number </label> <input type="text" name="phoneNumber">
